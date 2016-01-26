@@ -93,11 +93,11 @@ class Test_Assignment_01(unittest.TestCase):
         """
         i = 1
         self.assertTrue(type(i) == int)
-        self.assertTrue(isinstance(i, float))  # These lines do the same type checking
+        self.assertFalse(isinstance(i, float))  # These lines do the same type checking
         i = float(i)
         self.assertTrue(isinstance(i, float))
         i = str(i)
-        self.assertFalse(type(i) == str)
+        self.assertTrue(type(i) == str)
 
     def test_type_conversion2(self):
         """
